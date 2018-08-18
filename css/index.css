@@ -1,0 +1,496 @@
+html, body{
+    background-color: #f4f4f4;
+}
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+/* header的样式 */
+header {
+    background-color: #333;
+    height: 56px;
+}
+header .ccc {
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
+/* logo的样式 */
+header .left .logo {
+    display: inline-block;
+    width: 86px;
+    height: 56px;
+    background-image: url('../image/logo.png');
+    background-repeat: no-repeat;
+    background-size: 60% auto;
+    background-position: center center;
+    margin-left: 35px;
+    margin-right: 30px;
+}
+/* 导航栏 */
+header ul {
+    height: 56px;
+    margin: 0;
+}
+header ul li:hover .sub{
+    visibility: visible;
+}
+header ul li:hover a{
+    color: #fff;
+}
+header ul li .sub{
+    z-index: 1;
+    overflow: hidden;
+    visibility: hidden;
+    background-color: #333;
+    position: absolute;
+    height: auto;
+    width: 200px;
+    top: 50px;
+    left: -80px;
+    border-radius: 0 0 12px 12px;
+}
+header ul li .sub>li{
+    height: 49px;
+    margin: 0;
+}
+header ul li .sub>li:hover{
+    background-color: #999;
+}
+header ul li .sub>li:hover a{
+    color: #333;
+}
+header ul li .sub>li>a{
+    color: #999;
+}
+header ul li {
+    position: relative;
+    height: 56px;
+    line-height: 56px;
+    text-align: center;
+    margin-right: 12px;
+    cursor: pointer;
+    color: #999;
+}
+header ul li a {
+    color: #999;
+    text-decoration: none;
+}
+header .right li.ico {
+    display: inline-block;
+    width: 39px;
+    text-align: center;
+    font-size: 1.2em;
+}
+header .right li:last-child {
+    background: linear-gradient(60deg, rgb(255, 76, 180), rgb(248, 170, 97));
+    font-weight: bolder;
+    font-size: 15px;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    color: transparent;
+}
+/* 搜索框 */
+header input {
+    width: 190px;
+    height: 25px;
+    border-radius: 5px;
+    padding-left: 30px;
+    margin-right: 12px;
+    margin-left: 12px;
+    background-image: url(../image/search.png);
+    background-position: 5% 50%;
+    background-size: auto 50%;
+    background-repeat: no-repeat;
+}
+/* 当屏幕大于 ---> 960 */
+@media (max-width: 600px){
+    header {
+        display: none;
+    }
+    .header-mobile{
+        display: flex;
+    }
+}
+/* 当屏幕小于 ---> 960 */
+@media (min-width: 600px){
+    .header-mobile {
+        display: none;
+    }
+}
+/* 当屏幕小于 ---> 1200 */
+@media (max-width: 1200px) {
+    header .right{
+        display: none;
+    }
+}
+/* 当屏幕小于 500 */
+@media (max-width: 500px) {
+    .header02 i {
+        visibility: hidden;
+    }
+    .center .numbers {
+        visibility: hidden;
+        height: 15px !important;
+    }
+    .center .mark{
+        display: none;
+    }
+}
+/* header小屏幕======header小屏幕======header小屏幕======header小屏幕======header小屏幕====== */
+.header-mobile{
+    z-index: 9;
+    width: 100vw;
+    height: 40px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #999;
+    position: relative;
+}
+.header-mobile .user{
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    padding-right: 21px;
+}
+.header-mobile .slider {
+    overflow: hidden;
+    position: absolute;
+    width: 100vw;
+    height: 0;
+    transition: all .8s ease;
+    top: 40px;
+    left: 0;
+    background-color: #333;
+    padding-left: 18px;
+}            
+.header-mobile .show {
+    height: auto;
+}
+.header-mobile .search {
+    display: block;
+    height: 28px;
+    width: 90vw;
+    border-radius: 16px;
+    padding-left: 39px;
+    background-image: url(../image/search.png);
+    background-size: auto 50%;
+    background-repeat: no-repeat;
+    background-position: 2% center;
+}
+.header-mobile .slider a {
+    color: #fff;
+    display: inline-block;
+    height: 45px;
+    line-height: 45px;
+    text-decoration: none;
+    border-top:1px solid rgba(250, 250, 250, .08);
+}
+.header-mobile .slider span{
+    display: inline-block;
+    height: 45px;
+    width: 50px;
+    line-height: 45px;
+    text-align: center;
+}
+.header-mobile .slider .nav-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-mobile .fa-list-ul{
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+}
+.header-mobile .logo{
+    height: 40px;
+    width: 120px;
+    background-image: url(../image/logo.png);
+    background-size: auto 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/* header02======header02======header02======header02======header02======header02====== */
+.header02 {
+    overflow: hidden;
+    height: 44px;
+    background-color: #fff;
+    box-shadow: 0px 2px 9px #f3f3f3;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.header02 a{
+    margin-right: 24px;
+    display: inline-block;
+    height: 44px;
+    line-height: 44px;
+    color: #999;
+    font-weight: bolder;
+}
+.header02 a:nth-child(4){
+    margin-right: 0;
+}
+.header02 a.cur{
+    color: #333;
+}
+.header02 i {
+    font-size: 21px;
+    display: inline-block;
+    position: absolute;
+    right: 28px;
+    top: 12px;
+    color: #999;
+}
+/* container======container======container======container======container======container====== */
+.center {
+    padding-top: 38px;
+    max-width: 1600px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.center .card{
+    background-color: #f4f4f4;
+    padding: 15px;
+}
+.center .card .inner{
+    color: #999;
+}
+.center .card .inner .top {
+    cursor: pointer;
+    padding: 10px 10px 0 10px;
+    background-color: #fff;
+    margin-bottom: 9px;
+    position: relative;
+}
+.center .card .inner .top .mark{
+    visibility: hidden;
+    color: #333;
+    background-color: rgba(250, 250, 250, .9);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 15px;
+    animation: all 3s ease;
+    user-select:none;
+}
+.center .card .inner .top:hover .mark{
+    overflow: hidden;
+    visibility: visible;
+}
+.center .card .inner .top:hover .mark h3{
+    font-size: 14px;
+    font-weight: bolder;
+    margin-top: 1px;
+    margin-bottom: 12px;
+}
+.center .card .inner .top .numbers{
+    height: 30px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.center .card .inner .top .numbers span{
+    margin-right: 5px;
+}
+.center .card .inner .bottom {
+    cursor: pointer;
+    padding-left: 15px;
+}
+.center .card .inner .bottom img{
+    width: 16px;
+    height: 16px;
+}
+.more{
+    width: 300px;
+    height: 50px;
+    margin: 24px auto;
+    border-radius: 12px;
+    line-height: 50px;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    background-color: #ea4c89;
+    cursor: pointer;
+}
+.more:hover {
+    opacity: .8;
+}
+::selection {
+    background:#ea4c89; 
+    color:#555;
+}
+/* footer======footer======footer======footer======footer======footer======footer====== */
+footer{
+    background-color: #fff;
+    padding: 20px 0;
+    padding-bottom: 60px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+footer .item{
+    height: 100%;
+    color: #999;
+    /* background-color: orange; */
+}
+footer .item:nth-child(1) .logos {
+    font-size: 24px;
+    margin: 24px 0;
+}
+footer .item:nth-child(1) .logos i {
+    cursor: pointer;
+    margin-right: 12px;
+}
+footer .item:nth-child(1) .logos i:hover {
+    color: #333;
+}
+footer .item:nth-child(1) h5{
+    font-size: 15px;
+    font-weight: bolder;
+    margin-bottom: 12px;
+}
+footer .item:nth-child(1) p {
+    margin: 0;
+}
+footer .item:nth-child(1) .logo {
+    display: block;
+    width: 80px;
+    height: 20px;
+    background-image: url(https://cdn.dribbble.com/assets/logo-footer-hd-a05db77841b4b27c0bf23ec1378e97c988190dfe7d26e32e1faea7269f9e001b.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 80%;
+}
+footer .item:nth-child(2) {
+    display: flex;
+    flex-flow: row wrap;
+}
+footer .item:nth-child(2) h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bolder;
+    margin-bottom: 12px;
+    width: 100%;
+}
+footer .item:nth-child(2) ul {
+    width: 50%;
+}
+footer .item:nth-child(2) ul a {
+    display: block;
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+}
+footer .item:nth-child(2) ul a:hover{
+    color: #333;
+}
+footer .item:nth-child(2) p {
+    width: 100%;
+    margin-top: 18px;
+}
+footer .item:nth-child(3) h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bolder;
+    margin-bottom: 12px;
+    width: 100%;
+}
+footer .item:nth-child(3) .card{
+    width: 145px;
+    height: 33px;
+    position: relative;
+    margin-bottom: 21px;
+}
+footer .item:nth-child(3) .card img{
+    position: absolute;
+    width: 33px;
+    height: 33px;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+}
+footer .item:nth-child(3) .card h5 {
+    position: absolute;
+    top: 0;
+    left: 39px;
+    margin: 0;
+}
+footer .item:nth-child(3) .card p {
+    position: absolute;
+    top: 12px;
+    left: 39px;
+}
+footer .item:nth-child(4) .card01 {
+    height: 100px;
+    box-sizing: border-box;
+    background-image: url(https://assets.servedby-buysellads.com/p/manage/asset/id/38123);
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: 1% center;   
+    padding-left: 150px; 
+    overflow: hidden;
+    margin-bottom: 66px;
+}
+footer .item:nth-child(4) .card02 {
+    box-sizing: border-box;
+    background-image: url(https://cdn.dribbble.com/assets/ball-2acfbb9fdf187a34b07a7cc209d07025b39697eba6302c54942a556c10b3fa94.png);
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: 1% center;   
+    padding-left: 60px; 
+} 
+@media (min-width: 1200px) {
+    .container {
+        width:1600px
+    }
+}
+/* part01====== */
+.part01 {
+    min-height: 140px;
+    box-sizing: border-box;
+    padding: 30px 18px;
+    background-color: #252525;
+    text-align: center;
+}
+.part01 button{
+    width: 135px;
+    height: 37px;
+    background-color: #ea4c89;
+    border-radius: 9px;
+    margin-top: 18px;
+    color: #fff;
+    font-weight: bold;
+}
+.part01 p {
+    font-size: 21px;
+    color: #999;
+}
+.part01 p span:first-child{
+    color: #fff;
+    font-weight: bolder;
+}
+.part02 {
+    color: #999;
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333;
+}
+.part02 span {
+    margin-right: 12px;
+}
+.part02 a {
+    color: #fff;
+    text-decoration: underline;
+}
